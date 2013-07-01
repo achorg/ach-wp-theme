@@ -1,0 +1,421 @@
+* {
+  @include box-sizing(border-box);
+  margin:0;
+  padding:0;
+}
+
+@include establish-baseline;
+
+html {
+  @include background(
+    linear-gradient(left, color-stops($base-color 0, $base-color 50%, transparent 50%)),
+    linear-gradient(left, color-stops($complementary-color 0, $complementary-color 50%, transparent 50%)),
+    linear-gradient(left, color-stops($analogous-positive 0, $analogous-positive 50%, transparent 50%)),
+    linear-gradient(left, color-stops($default-color 0, $default-color 50%, transparent 50%)),
+    linear-gradient(left, color-stops($complementary-analogous-positive 0, $complementary-analogous-positive 50%, transparent 50%)),
+    linear-gradient(left, color-stops($default-color, $default-color))
+    );
+    background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
+    background-repeat: repeat-x;
+    background-position: -10% 0;
+    padding-top:5px;
+    background-color: #f7f7f7;
+}
+
+body {
+  font-family: $default-font;
+  color: $default-color;
+  @include container;
+  border-bottom: 1px dotted #ccc;
+  background:#fff;
+}
+
+a {
+  @include link-colors($link-color, $link-hover-color, $link-active-color,
+  $link-visited-color, $link-focus-color);
+
+  nav & {
+    text-decoration:none;
+  }
+}
+
+#{headings()} {
+  font-family: $heading-font;
+  a {
+    text-decoration:none;
+  }
+}
+
+h1 {
+  @include adjust-font-size-to(36px);
+  @include adjust-leading-to(3, 36px);
+  .blog article & {
+    @include adjust-font-size-to(30px);
+    @include adjust-leading-to(2, 30px);
+    border:none !important;
+    background:none!important;
+  }
+}
+
+h2 {
+  @include adjust-font-size-to(24px);
+  @include adjust-leading-to(1, 24px);
+  @include leader(2,24px);
+  font-weight:bold;
+}
+
+h3 {
+  @include adjust-font-size-to(20px);
+  @include adjust-leading-to(1,20px);
+  font-family: $sans-serif;
+  color: $default-color-light;
+  @include leader(2, 20px);
+  
+  h2 + & {
+    @include leader(1, 20px);
+  }
+}
+
+#{headings(4,6)}{
+  @include leader(1);
+  & + p {
+    margin-top:0;
+  }
+}
+
+h4 {
+  font-weight:bold;
+}
+
+h5 {
+  font-style:italic;
+}
+
+h6 {
+  font-style:italic;
+  color: $default-color-lighter;
+}
+
+p {
+  margin: rhythm(1) 0;
+}
+
+blockquote {
+  margin: 0 rhythm(1) 0 0;
+  border-left: 1px dotted #ccc;
+  padding-left: rhythm(1);
+  font-style:italic;
+}
+
+dl {
+  margin: rhythm(1) 0;
+
+  dt {
+    font-weight:bold;
+  }
+  dd {
+    margin: 0 0 rhythm(1) rhythm(1);
+  }
+}
+
+ul {
+  list-style:disc;
+}
+
+ol {
+  list-style:decimal;
+}
+
+ul, ol {
+  padding:0;
+  margin: rhythm(1) 0 rhythm(1) rhythm(1);
+
+  nav & {
+    margin-left:0;
+    padding-left:0;
+    list-style:none !important;
+  }
+
+  ul {
+    list-style:circle;
+  }
+
+  ol {
+    list-style:upper-alpha;
+  }
+
+  ul, ol {
+    margin: 0 0 0 rhythm(1);
+
+    ul {
+      list-style:square;
+    }
+
+    ol {
+      list-style:lower-alpha;
+    }
+
+    ul,ol {
+      ul {
+        list-style:diamond;
+      }
+
+      ol {
+        list-style:lower-roman;
+      }
+    }
+  }
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+th,
+td {
+  padding: rhythm(1) rhythm(0.5) 0;
+  @include trailing-border(1px);
+  border-color: rgba(0,0,0,.2);
+}
+
+th {
+  @include trailing-border(3px);
+  text-align:left;
+}
+
+img {
+  max-width:100%;
+  width:auto;
+  height:auto;
+}
+
+em,i {
+  font-style:italic;
+}
+
+strong, b {
+  font-weight:bold;
+}
+
+code {
+  font-family: monospace;
+  color: rgba(black, 0.75);
+}
+
+del {
+  color: $default-color-lighter;
+}
+
+ins {
+  text-decoration:none;
+  background: rgba(yellow, 0.125);
+}
+
+hr {
+  border:1px solid $default-color-lightest;
+  height:0;
+}
+
+header[role=banner] {
+  border-bottom:1px dotted #ccc;
+  background-image:url('images/subtle_dots.png');
+  @include background(
+    linear-gradient(left, rgba(#fff, 0.25), rgba(#fff, 0.25)),
+    url("images/subtle_dots.png")
+    );
+  background-attachment:fixed;
+  @include clearfix;
+  @include bleed(gutter(12));
+  h1 {
+    text-align:center;
+    font-family: $sans-serif;
+    @include adjust-font-size-to(20px);
+    @include adjust-leading-to(1, 20px);
+    @include padding-leader(2, 20px);
+    margin:0;
+    @media (min-width: $medium-screen) {
+      text-align:left;
+      @include adjust-font-size-to(15px);
+      @include adjust-leading-to(1, 15px);
+      @include span-columns(6);
+      @include padding-leader(2, 15px);
+      @include padding-trailer(2, 15px);
+    }
+  }
+
+  nav {
+
+    @media (min-width: $medium-screen) {
+      @include span-columns(6 omega);
+    }
+    ul {
+      @include adjust-font-size-to(15px);
+      @include adjust-leading-to(1, 15px);
+      @include padding-leader(2, 15px);
+      @include padding-trailer(2, 15px);
+      font-family: $sans-serif;
+      text-align:center;
+      margin:0;
+      @media (min-width: $medium-screen) {
+        text-align:right;
+      }
+    }
+    li {
+      display:inline;
+
+      & + li:before {
+        content: " · ";
+        color: $default-color-lighter;
+      }
+    }
+  }
+
+}
+
+div[role=main] {
+  @include clearfix;
+  padding: rhythm(1) 0;
+  @media (min-width: $medium-screen) {
+    @include pad(1,1);
+    padding-bottom: rhythm(2);
+  }
+
+  /*@media (min-width: $large-screen) {*/
+    /*@include pad(2,2);*/
+    /*padding-bottom: rhythm(3);*/
+  /*}*/
+
+  h1 {
+    .blog &,
+    .page &,
+    .single & {
+
+      border-bottom: 1px dotted #ccc;
+      @include adjust-font-size-to(36px);
+      @include padding-trailer(1, 36px);
+      @include trailer(2, 36px);
+      text-align:center;
+
+      @include bleed($grid-padding);
+
+      @media (min-width: $medium-screen) {
+        text-align:left;
+        @include bleed(space(1, 10) + gutter(10));
+      }
+    }
+  }
+}
+
+article {
+  @include clearfix;
+  .entry {
+    .page &,
+    .single & {
+      & > p:first-child {
+        font-family: $sans-serif;
+        @include adjust-font-size-to(20px);
+        @include adjust-leading-to(1.5,20px);
+        margin: 0 0 rhythm(1.5, 20px);
+      }
+    }
+  }
+}
+
+.entry :first-child {
+}
+
+.contextual {
+  & > ul {
+    @include adjust-font-size-to(14px);
+  }
+
+  li {
+    border-top: 1px solid #eee;
+  }
+  a {
+    display:block;
+    @include adjust-leading-to(1,14px);
+    @include padding-leader(0.5,14px);
+    @include padding-trailer(0.5,14px);
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .entry {
+    @include span-columns(7, 10);
+  }
+
+  .contextual {
+    @include span-columns(3 omega, 10);
+  }
+}
+
+footer[role=contentinfo] {
+  padding-top: rhythm(1);
+  border-top: 1px dotted #ccc;
+  @include bleed($grid-padding);
+
+  p,
+  .vcard {
+    @include adjust-font-size-to(14px);
+    @include adjust-leading-to(0.8,14px);
+    color: $default-color-light;
+  }
+
+  @media (min-width: $medium-screen) {
+    text-align:left;
+    .vcard,
+    p {
+      @include span-columns(4 omega);
+      clear:right;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+  }
+
+}
+
+.kicker {
+  margin-bottom:0;
+  @include adjust-font-size-to(13px);
+  font-style:italic;
+  @include adjust-leading-to(1, 13px);
+  color: $default-color-lighter;
+}
+
+.genealogy {
+  a {
+    text-decoration:none;
+    & + a:before {
+      content: ": ";
+      color: #ccc;
+      text-decoration:none !important;
+      margin: 0 0.25em;
+    }
+
+    & + a:last-child:before {
+      content: "> ";
+      color: #666;
+    }
+  }
+}
+
+@if ($development == true) {
+
+  header,
+  h1
+   {
+    background:none !important;
+  }
+  html {
+      @include baseline-grid-background;
+  }
+  body {
+      background-color: rgba(255,255,255,0.8) !important;
+      @include susy-grid-background;
+      background-size:auto;
+  }
+
+}

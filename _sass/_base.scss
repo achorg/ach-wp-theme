@@ -1,0 +1,102 @@
+// Imports
+@import "compass";
+@import "susy";
+@import "mixins";
+@import "compass/reset";
+
+// Development
+$development: false;
+
+// Screen Widths
+$medium-screen: 600px;
+$large-screen: 1100px;
+
+// Susy
+$container-style: fluid; // Sets container to a fluid width.
+$gutter-width: 2em;
+$grid-padding: gutter($total-columns);
+
+// Compass
+$grid-background-baseline-color: rgba(0,80,150,0.2); // Background color for Compass's vertical rhythm.
+$grid-background-column-color: rgba(0,80,150,0.05); // Background color for grid columns
+$grid-background-baseline-height: $base-line-height;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+// Colors
+$base-color: #f53;
+
+@function color-wheel($base-color, $color-rule, $color-direction: 'positive') {
+
+  $degrees: 0;
+
+  @if $color-rule == 'analogous' {
+    $degrees: 30;
+  } @else if $color-rule == 'split-complementary' {
+    $degrees: 150;
+  } @else if $color-rule == 'triad' {
+    $degrees: 120;
+  } @else if $color-rule == 'right-triangle' {
+    $degrees: 90;
+  }
+
+  @if $color-direction == 'negative' {
+    $degrees: -$degrees;
+  }
+
+  $color: $base-color;
+  @if $color-rule == 'complementary' {
+    $color: complement($base-color);
+  } @else {
+    $color: adjust-hue($base-color, $degrees);
+  }
+
+  @return $color;
+}
+
+
+$complementary-color: color-wheel($base-color, 'complementary');
+$analogous-positive: color-wheel($base-color, 'analogous');
+$complementary-analogous-positive: color-wheel($analogous-positive, 'complementary');
+
+$default-color                  : rgb(60, 60, 60);
+$default-color-light            : rgba($default-color, 0.75);
+$default-color-lighter          : rgba($default-color, 0.5);
+$default-color-lightest         : rgba($default-color, 0.1);
+
+$link-color                     : $base-color;
+$link-visited-color             : darken($link-color, 10%);
+$link-hover-color               : color-wheel($base-color, 'complementary');
+$link-focus-color               : $link-hover-color;
+$link-active-color              : $link-color;
+
+// Fonts
+$serif: "Noto Serif", serif;
+$sans-serif: "Noto Sans", sans-serif;
+$default-font: $serif;
+$alt-font: $sans-serif;
+$heading-font: $serif;
+
+div.colors div{
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  display:inline-block;
+}
+
+.base-color {
+  background: $base-color;
+}
+
+.complementary-color {
+  background: $complementary-color;
+}
+
+.analogous-positive {
+  background: $analogous-positive;
+}
+
+.complementary-analogous-positive {
+  background: $complementary-analogous-positive;
+}
