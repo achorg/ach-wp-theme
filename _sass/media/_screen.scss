@@ -384,6 +384,73 @@ article {
   }
 }
 
+.commentlist {
+  list-style:none;
+  margin-left:-40px;
+
+  .comment-author,
+  .comment-meta {
+    display:inline;
+    
+    a {
+      text-decoration:none;
+    }
+  }
+  
+  .comment-meta {
+    text-align:right;
+    float:right;
+    @include adjust-font-size-to(12px);
+    @include adjust-leading-to(1, 12px);
+  }
+
+  .says {
+    display:none;
+  }
+  cite a {
+    text-decoration:none;
+  }
+
+  img {
+    width: 30px;
+    height:30px;
+    @include border-radius(15px);
+    display:block;
+    float:left;
+    margin-left: -40px;
+  }
+
+  li {
+    padding-left: 40px;
+    margin-bottom: rhythm(1);
+    padding-bottom: rhythm(1);
+  }
+
+  > li {
+    border-bottom: 1px solid $default-color-lightest;
+  }
+
+  ul {
+    list-style:none;
+    margin-left: columns(1, 10);
+    margin-top: rhythm(1);
+  }
+
+  .comment-reply-link {
+    text-decoration:none;
+    background: lighten($default-color, 50%);
+    color: rgba(#fff, 0.9);
+    @include border-radius(2px);
+    @include adjust-font-size-to(12px);
+    padding: 0.25em 0.5em;
+    font-family: $sans-serif;
+    &:hover,
+    &:focus {
+      background: $link-color;
+    }
+  }
+}
+
 .pager {
   @include clearfix;
 
