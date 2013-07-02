@@ -102,44 +102,20 @@ function achwptheme_blog_archive_title() {
 /**
  * Register sidebars
  */
-if ( function_exists('register_sidebar') ) :
-    register_sidebar(array(
-		'name' => 'Blog Sidebar',
-        'before_widget' => '<div class="%2$s widget clearfloat">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
-    ));
-	 register_sidebar(array(
-		'name' => 'About Page Sidebar',
-        'before_widget' => '<div class="%2$s widget clearfloat">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
-    ));
-	 register_sidebar(array(
-		'name' => 'Footer',
-        'before_widget' => '<div class="%2$s widget clearfloat">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
-	 register_sidebar(array(
-		'name' => 'Single Post',
-        'before_widget' => '<div class="%2$s widget clearfloat">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-    ));
-
-	 register_sidebar(array(
-		'name' => 'Single Neatline Plugin',
-        'before_widget' => '<div class="%2$s widget clearfloat">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-    ));
-endif;
+if ( function_exists('register_sidebar') ) {
+    $beforeTitle = '<h2>';
+    $afterTitle = '</h2>';
+    $sidebars = array('Primary', 'Secondary', 'Tertiary');
+    foreach($sidebars as $sidebar) {
+      register_sidebar(array(
+      'name' => $sidebar . ' Home Widget Area',
+          'before_widget' => '<div class="content-feature">',
+          'after_widget' => '</div>',
+          'before_title' => $beforeTitle,
+          'after_title' => $afterTitle,
+        ));
+    }
+}
 
 /**
  * Replaces "[...]" on excerpt_more with an actual ellipsis.
