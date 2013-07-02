@@ -266,7 +266,17 @@ header[role=banner] {
         content: " · ";
         color: $default-color-lighter;
       }
+
+      &.current-menu-item,
+      &.current_page_item {
+        a {
+          color: $default-color;
+          border-bottom: 3px solid $default-color;
+          padding-bottom: 5px;
+        }
+      }
     }
+
   }
 }
 
@@ -321,12 +331,14 @@ article {
   }
 
   .blog & + article:before {
-        display:block;
-        content: "\2022 \2022 \2022";
-        font-family: sans-serif;
-        color: $analogous-positive;
-        @include adjust-font-size-to(36px);
-        text-align:center;
+    display:block;
+    content: "\2022 \2022 \2022 \2022 \2022";
+    font-family: sans-serif;
+    color: $analogous-positive;
+    @include adjust-font-size-to(32px);
+    text-align:center;
+    @include trailer(1, 32px);
+    letter-spacing: rhythm(0.5, 32px);
   }
 }
 
@@ -345,12 +357,19 @@ article {
 
   li {
     border-top: 1px solid #eee;
-  }
-  a {
-    display:block;
-    @include adjust-leading-to(1,14px);
-    @include padding-leader(0.5,14px);
-    @include padding-trailer(0.5,14px);
+
+    a {
+      display:block;
+      @include adjust-leading-to(1,14px);
+      @include padding-leader(0.5,14px);
+      @include padding-trailer(0.5,14px);
+      padding: rhythm(0.5, 14px);
+    }
+
+    &.current_page_item a {
+      color: $default-color;
+      font-weight:bold;
+    }
   }
 }
 

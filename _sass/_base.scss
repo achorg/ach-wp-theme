@@ -69,7 +69,7 @@ $default-color-lightest         : rgba($default-color, 0.1);
 
 $link-color                     : $base-color;
 $link-visited-color             : darken($link-color, 10%);
-$link-hover-color               : color-wheel($base-color, 'complementary');
+$link-hover-color               : $analogous-positive;
 $link-focus-color               : $link-hover-color;
 $link-active-color              : $link-color;
 

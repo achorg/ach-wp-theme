@@ -135,10 +135,10 @@ div.colors div {
     color: #ff2a00;
   }
   a:focus {
-    color: #33ddff;
+    color: #ffbb33;
   }
   a:hover {
-    color: #33ddff;
+    color: #ffbb33;
   }
   a:active {
     color: #ff5533;
@@ -366,6 +366,11 @@ div.colors div {
     content: " · ";
     color: rgba(60, 60, 60, 0.5);
   }
+  header[role=banner] nav li.current-menu-item a, header[role=banner] nav li.current_page_item a {
+    color: #3c3c3c;
+    border-bottom: 3px solid #3c3c3c;
+    padding-bottom: 5px;
+  }
 
   div[role=main] {
     padding: 1.5em 0;
@@ -418,12 +423,14 @@ div.colors div {
   }
   .blog article + article:before {
     display: block;
-    content: "\2022 \2022 \2022";
+    content: "\2022 \2022 \2022 \2022 \2022";
     font-family: sans-serif;
     color: #ffbb33;
-    font-size: 2.25em;
-    line-height: 1.33333em;
+    font-size: 2em;
+    line-height: 1.5em;
     text-align: center;
+    margin-bottom: 0.75em;
+    letter-spacing: 0.375em;
   }
 
   .content-feature {
@@ -447,11 +454,16 @@ div.colors div {
   .contextual li {
     border-top: 1px solid #eee;
   }
-  .contextual a {
+  .contextual li a {
     display: block;
     line-height: 1.71429em;
     padding-top: 0.85714em;
     padding-bottom: 0.85714em;
+    padding: 0.85714em;
+  }
+  .contextual li.current_page_item a {
+    color: #3c3c3c;
+    font-weight: bold;
   }
 
   footer[role=contentinfo] {
