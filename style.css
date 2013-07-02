@@ -504,16 +504,18 @@ div.colors div {
     text-decoration: none;
   }
   .commentlist img {
-    width: 30px;
-    height: 30px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
+    width: 36px;
+    height: 36px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
     display: block;
     float: left;
     margin-left: -40px;
+    border: 1px solid rgba(60, 60, 60, 0.1);
+    padding: 2px;
   }
   .commentlist li {
     padding-left: 40px;

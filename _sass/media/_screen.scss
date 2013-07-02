@@ -412,12 +412,14 @@ article {
   }
 
   img {
-    width: 30px;
-    height:30px;
-    @include border-radius(15px);
+    width: 36px;
+    height:36px;
+    @include border-radius(18px);
     display:block;
     float:left;
     margin-left: -40px;
+    border:1px solid $default-color-lightest;
+    padding:2px;
   }
 
   li {
