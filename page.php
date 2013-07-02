@@ -8,6 +8,15 @@ if ($ancestors) {
   $oldestAncestor = $post->ID;
 }
 
+$pageNav = wp_list_pages(
+  array(
+    'title_li' => '',
+    'depth' => 2,
+    'child_of' => $oldestAncestor,
+    'echo' => 0
+  )
+);
+
 get_header();
 
 if (have_posts()) : while (have_posts()) : the_post();?>
@@ -25,6 +34,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
 <?php the_content(); ?>
 </div>
 
+<?php if($pageNav): ?>
 <nav role="contextual" class="contextual">
 <ul>
     <?php wp_list_pages(
@@ -32,14 +42,10 @@ if (have_posts()) : while (have_posts()) : the_post();?>
         'title_li'=>'',
         'include'=> $oldestAncestor
       ) ); ?>
-    <?php wp_list_pages(
-      array(
-        'title_li'=>'',
-        'depth' => 2,
-        'child_of'=> $oldestAncestor
-      ) ); ?>
+    <?php echo $pageNav; ?>
 </ul>
 </nav>
+<?php endif; ?>
 <?php endwhile; endif; ?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
