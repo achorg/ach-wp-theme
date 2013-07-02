@@ -1,27 +1,3 @@
-<?php if (is_page()): ?>
-<?php
-global $post;
-$oldestAncestor = $post->ID;
-if ($post->post_parent) {
-  $ancestors = array_reverse(get_post_ancestors(get_the_ID()));
-  $oldestAncestor = $ancestors[0];
-}
-?>
-<ul>
-    <?php wp_list_pages(
-      array(
-        'title_li'=>'',
-        'include'=> $oldestAncestor
-      ) ); ?>
-
-    <?php wp_list_pages(
-      array(
-        'title_li'=>'',
-        'child_of'=> $oldestAncestor
-      ) ); ?>
-</ul>
-<?php endif; ?>
-
 <?php get_header(); ?>
 <?php if (is_home() || is_archive()): ?>
 <h1>News</h1>
@@ -29,6 +5,9 @@ if ($post->post_parent) {
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header>
+<p class="kicker">
+  <time pubdate datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F j, Y'); ?></time>
+</p>
     <h1>
     <?php if (is_singular()): ?>
     <?php the_title(); ?>
@@ -37,13 +16,7 @@ if ($post->post_parent) {
     <?php endif; ?>
   </h1>
   </header>
-<p class="kicker">
-  <?php if (is_page()) : ?>
 
-
-  <time pubdate datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F j, Y'); ?></time>
-</p>
-<?php endif; ?>
 
 <div class="entry">
 <?php if (!is_singular()) { ?>
