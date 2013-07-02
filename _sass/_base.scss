@@ -39,6 +39,8 @@ $base-color: #f53;
     $degrees: 120;
   } @else if $color-rule == 'right-triangle' {
     $degrees: 90;
+  } @else {
+    $degrees: $color-rule;
   }
 
   @if $color-direction == 'negative' {
