@@ -466,6 +466,31 @@ div.colors div {
     font-weight: bold;
   }
 
+  #pager:before, #pager:after {
+    content: "";
+    display: table;
+  }
+  #pager:after {
+    clear: both;
+  }
+  #pager, .ie #pager {
+    *zoom: 1;
+  }
+  #pager li {
+    float: left;
+    width: 48%;
+  }
+  #pager li#newer {
+    float: right;
+    text-align: right;
+  }
+  #pager .kicker {
+    display: block;
+    font-size: 0.6875em;
+    line-height: 2.18182em;
+    line-height: 2.18182em;
+  }
+
   footer[role=contentinfo] {
     padding-top: 1.5em;
     border-top: 1px solid rgba(60, 60, 60, 0.1);
@@ -486,7 +511,6 @@ div.colors div {
     margin: 0;
     font-size: 0.8125em;
     line-height: 1.84615em;
-    font-style: italic;
     line-height: 1.84615em;
     color: rgba(60, 60, 60, 0.5);
   }

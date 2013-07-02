@@ -373,6 +373,26 @@ article {
   }
 }
 
+#pager {
+  @include clearfix;
+
+  li {
+    float:left;
+    width: 48%;
+
+    &#newer {
+      float:right;
+      text-align:right;
+    }
+  }
+
+  .kicker {
+    display:block;
+    @include adjust-font-size-to(11px);
+    @include adjust-leading-to(1, 11px);
+  }
+}
+
 @media (min-width: $medium-screen) {
   .page,
   .single {
@@ -413,7 +433,6 @@ footer[role=contentinfo] {
 .kicker {
   margin:0;
   @include adjust-font-size-to(13px);
-  font-style:italic;
   @include adjust-leading-to(1, 13px);
   color: $default-color-lighter;
 }
