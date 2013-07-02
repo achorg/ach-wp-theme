@@ -211,8 +211,18 @@ ins {
 }
 
 hr {
-  border:1px solid $default-color-lightest;
-  height:0;
+  border:none;
+  &:after {
+    display:block;
+    content: "\25C9 \25C9 \25C9";
+    font-family: sans-serif;
+    color: $analogous-positive;
+    @include adjust-font-size-to(16px);
+    @include adjust-leading-to(2,16px);
+    text-align:center;
+    @include trailer(1, 16px);
+    letter-spacing: rhythm(0.25, 16px);
+  }
 }
 
 header[role=banner] {
@@ -332,13 +342,14 @@ article {
 
   .blog & + article:before {
     display:block;
-    content: "\2022 \2022 \2022 \2022 \2022";
+    content: "\25C9 \25C9 \25C9";
     font-family: sans-serif;
     color: $analogous-positive;
-    @include adjust-font-size-to(32px);
+    @include adjust-font-size-to(16px);
+    @include adjust-leading-to(2,16px);
     text-align:center;
-    @include trailer(1, 32px);
-    letter-spacing: rhythm(0.5, 32px);
+    @include trailer(1, 16px);
+    letter-spacing: rhythm(0.25, 16px);
   }
 }
 

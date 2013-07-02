@@ -16,6 +16,7 @@
 	?>
 
   <?php if ( have_comments() ) : ?>
+<hr>
     <div id="comments">
 
 		<h2 id="comments-title">

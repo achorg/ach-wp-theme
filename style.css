@@ -313,8 +313,19 @@ div.colors div {
   }
 
   hr {
-    border: 1px solid rgba(60, 60, 60, 0.1);
-    height: 0;
+    border: none;
+  }
+  hr:after {
+    display: block;
+    content: "\25C9 \25C9 \25C9";
+    font-family: sans-serif;
+    color: #ffbb33;
+    font-size: 1em;
+    line-height: 1.5em;
+    line-height: 3em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    letter-spacing: 0.375em;
   }
 
   header[role=banner] {
@@ -423,13 +434,14 @@ div.colors div {
   }
   .blog article + article:before {
     display: block;
-    content: "\2022 \2022 \2022 \2022 \2022";
+    content: "\25C9 \25C9 \25C9";
     font-family: sans-serif;
     color: #ffbb33;
-    font-size: 2em;
+    font-size: 1em;
     line-height: 1.5em;
+    line-height: 3em;
     text-align: center;
-    margin-bottom: 0.75em;
+    margin-bottom: 1.5em;
     letter-spacing: 0.375em;
   }
 
