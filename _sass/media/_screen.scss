@@ -7,27 +7,27 @@
 @include establish-baseline;
 
 html {
-  @include background(
-    linear-gradient(left, color-stops($base-color 0, $base-color 50%, transparent 50%)),
-    linear-gradient(left, color-stops($complementary-color 0, $complementary-color 50%, transparent 50%)),
-    linear-gradient(left, color-stops($analogous-positive 0, $analogous-positive 50%, transparent 50%)),
-    linear-gradient(left, color-stops($default-color 0, $default-color 50%, transparent 50%)),
-    linear-gradient(left, color-stops($complementary-analogous-positive 0, $complementary-analogous-positive 50%, transparent 50%)),
-    linear-gradient(left, color-stops($default-color, $default-color))
-    );
-    background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
-    background-repeat: repeat-x;
-    background-position: -10% 0;
-    padding-top:5px;
-    background-color: #f7f7f7;
+    background: #f7f7f7 url('images/subtle_dots.png') fixed;
 }
 
 body {
   font-family: $default-font;
   color: $default-color;
   @include container;
-  border-bottom: 1px dotted #ccc;
-  background:#fff;
+  @include background(
+      linear-gradient(left, color-stops($complementary-color 0, $complementary-color 50%, transparent 50%)),
+    linear-gradient(left, color-stops($base-color 0, $base-color 50%, transparent 50%)),
+    linear-gradient(left, color-stops($analogous-positive 0, $analogous-positive 50%, transparent 50%)),
+    linear-gradient(left, color-stops($default-color 0, $default-color 50%, transparent 50%)),
+    linear-gradient(left, color-stops($complementary-analogous-positive 0, $complementary-analogous-positive 50%, transparent 50%)),
+    linear-gradient(left, color-stops($default-color, $default-color))
+    );
+
+    @include background-size(57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px);
+    background-repeat: repeat-x;
+    background-position: -10% 0;
+    padding-top: 5px;
+  background-color:#fff;
 }
 
 a {
@@ -49,18 +49,16 @@ a {
 h1 {
   @include adjust-font-size-to(36px);
   @include adjust-leading-to(3, 36px);
-  .blog article & {
-    @include adjust-font-size-to(30px);
-    @include adjust-leading-to(2, 30px);
-    border:none !important;
-    background:none!important;
-  }
 }
 
 h2 {
   @include adjust-font-size-to(24px);
   @include adjust-leading-to(1, 24px);
   @include leader(2,24px);
+  &:first-child {
+    @include leader(1,24px);
+  }
+
   font-weight:bold;
 }
 
@@ -102,7 +100,7 @@ p {
 
 blockquote {
   margin: 0 rhythm(1) 0 0;
-  border-left: 1px dotted #ccc;
+  border-left: 1px solid $default-color-lightest;
   padding-left: rhythm(1);
   font-style:italic;
 }
@@ -218,8 +216,7 @@ hr {
 }
 
 header[role=banner] {
-  border-bottom:1px dotted #ccc;
-  background-image:url('images/subtle_dots.png');
+  border-bottom:1px solid $default-color-lightest;
   @include background(
     linear-gradient(left, rgba(#fff, 0.25), rgba(#fff, 0.25)),
     url("images/subtle_dots.png")
@@ -249,6 +246,7 @@ header[role=banner] {
     @media (min-width: $medium-screen) {
       @include span-columns(6 omega);
     }
+
     ul {
       @include adjust-font-size-to(15px);
       @include adjust-leading-to(1, 15px);
@@ -270,7 +268,6 @@ header[role=banner] {
       }
     }
   }
-
 }
 
 div[role=main] {
@@ -281,23 +278,16 @@ div[role=main] {
     padding-bottom: rhythm(2);
   }
 
-  /*@media (min-width: $large-screen) {*/
-    /*@include pad(2,2);*/
-    /*padding-bottom: rhythm(3);*/
-  /*}*/
-
-  h1 {
-    .blog &,
+    & >,
     .page &,
     .single & {
-
-      border-bottom: 1px dotted #ccc;
+      h1 {
       @include adjust-font-size-to(36px);
       @include padding-trailer(1, 36px);
       @include trailer(2, 36px);
       text-align:center;
-
       @include bleed($grid-padding);
+      border-bottom: 1px solid $default-color-lightest;
 
       @media (min-width: $medium-screen) {
         text-align:left;
@@ -320,9 +310,32 @@ article {
       }
     }
   }
+
+  h1 {
+    .blog & {
+      @include adjust-font-size-to(24px);
+      @include adjust-leading-to(1, 24px);
+      border:none !important;
+      background:none!important;
+    }
+  }
+
+  .blog & + article:before {
+        display:block;
+        content: "\2022 \2022 \2022";
+        font-family: sans-serif;
+        color: $analogous-positive;
+        @include adjust-font-size-to(36px);
+        text-align:center;
+  }
 }
 
-.entry :first-child {
+.content-feature {
+  @include span-columns(4, 12);
+
+  #featured-content &:nth-child(3) {
+    @include span-columns(4 omega, 12);
+  }
 }
 
 .contextual {
@@ -342,19 +355,23 @@ article {
 }
 
 @media (min-width: $medium-screen) {
-  .entry {
-    @include span-columns(7, 10);
-  }
+  .page,
+  .single {
+    .entry {
+      @include span-columns(7, 10);
+    }
 
-  .contextual {
-    @include span-columns(3 omega, 10);
+    .contextual {
+      @include span-columns(3 omega, 10);
+    }
   }
 }
 
 footer[role=contentinfo] {
   padding-top: rhythm(1);
-  border-top: 1px dotted #ccc;
+  border-top: 1px solid $default-color-lightest;
   @include bleed($grid-padding);
+  background: #fff url('images/subtle_dots.png') fixed;
 
   p,
   .vcard {
@@ -364,6 +381,7 @@ footer[role=contentinfo] {
   }
 
   @media (min-width: $medium-screen) {
+    @include clearfix;
     text-align:left;
     .vcard,
     p {
@@ -371,14 +389,10 @@ footer[role=contentinfo] {
       clear:right;
     }
   }
-
-  @media (min-width: $large-screen) {
-  }
-
 }
 
 .kicker {
-  margin-bottom:0;
+  margin:0;
   @include adjust-font-size-to(13px);
   font-style:italic;
   @include adjust-leading-to(1, 13px);
@@ -390,7 +404,7 @@ footer[role=contentinfo] {
     text-decoration:none;
     & + a:before {
       content: ": ";
-      color: #ccc;
+      color: $default-color-lightest;
       text-decoration:none !important;
       margin: 0 0.25em;
     }

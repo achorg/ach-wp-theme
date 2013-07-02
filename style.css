@@ -97,16 +97,7 @@ div.colors div {
   }
 
   html {
-    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff5533), color-stop(50%, #ff5533), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #33ddff), color-stop(50%, #33ddff), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffbb33), color-stop(50%, #ffbb33), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(50%, #3c3c3c), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3377ff), color-stop(50%, #3377ff), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(100%, #3c3c3c));
-    background: -webkit-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -webkit-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -webkit-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -webkit-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -webkit-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -webkit-linear-gradient(left, #3c3c3c, #3c3c3c);
-    background: -moz-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -moz-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -moz-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -moz-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -moz-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -moz-linear-gradient(left, #3c3c3c, #3c3c3c);
-    background: -o-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -o-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -o-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -o-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -o-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -o-linear-gradient(left, #3c3c3c, #3c3c3c);
-    background: linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), linear-gradient(left, #3c3c3c, #3c3c3c);
-    background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
-    background-repeat: repeat-x;
-    background-position: -10% 0;
-    padding-top: 5px;
-    background-color: #f7f7f7;
+    background: #f7f7f7 url("images/subtle_dots.png") fixed;
   }
 
   body {
@@ -117,8 +108,19 @@ div.colors div {
     padding-right: 2.85714%;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 1px dotted #ccc;
-    background: #fff;
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #33ddff), color-stop(50%, #33ddff), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff5533), color-stop(50%, #ff5533), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffbb33), color-stop(50%, #ffbb33), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(50%, #3c3c3c), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3377ff), color-stop(50%, #3377ff), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(100%, #3c3c3c));
+    background: -webkit-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -webkit-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -webkit-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -webkit-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -webkit-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -webkit-linear-gradient(left, #3c3c3c, #3c3c3c);
+    background: -moz-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -moz-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -moz-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -moz-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -moz-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -moz-linear-gradient(left, #3c3c3c, #3c3c3c);
+    background: -o-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -o-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -o-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -o-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -o-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -o-linear-gradient(left, #3c3c3c, #3c3c3c);
+    background: linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), linear-gradient(left, #3c3c3c, #3c3c3c);
+    -webkit-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
+    -moz-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
+    -o-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
+    background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
+    background-repeat: repeat-x;
+    background-position: -10% 0;
+    padding-top: 5px;
+    background-color: #fff;
   }
   body:after {
     content: "";
@@ -157,13 +159,6 @@ div.colors div {
     line-height: 1.33333em;
     line-height: 2em;
   }
-  .blog article h1 {
-    font-size: 1.875em;
-    line-height: 1.6em;
-    line-height: 1.6em;
-    border: none !important;
-    background: none !important;
-  }
 
   h2 {
     font-size: 1.5em;
@@ -171,6 +166,9 @@ div.colors div {
     line-height: 1em;
     margin-top: 2em;
     font-weight: bold;
+  }
+  h2:first-child {
+    margin-top: 1em;
   }
 
   h3 {
@@ -211,7 +209,7 @@ div.colors div {
 
   blockquote {
     margin: 0 1.5em 0 0;
-    border-left: 1px dotted #ccc;
+    border-left: 1px solid rgba(60, 60, 60, 0.1);
     padding-left: 1.5em;
     font-style: italic;
   }
@@ -320,8 +318,7 @@ div.colors div {
   }
 
   header[role=banner] {
-    border-bottom: 1px dotted #ccc;
-    background-image: url("images/subtle_dots.png");
+    border-bottom: 1px solid rgba(60, 60, 60, 0.1);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.25)), color-stop(100%, rgba(255, 255, 255, 0.25))), url("images/subtle_dots.png");
     background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.png");
     background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.png");
@@ -372,10 +369,6 @@ div.colors div {
 
   div[role=main] {
     padding: 1.5em 0;
-    /*@media (min-width: $large-screen) {*/
-    /*@include pad(2,2);*/
-    /*padding-bottom: rhythm(3);*/
-    /*}*/
   }
   div[role=main]:before, div[role=main]:after {
     content: "";
@@ -387,8 +380,7 @@ div.colors div {
   div[role=main], .ie div[role=main] {
     *zoom: 1;
   }
-  .blog div[role=main] h1, .page div[role=main] h1, .single div[role=main] h1 {
-    border-bottom: 1px dotted #ccc;
+  div[role=main] > h1, .page div[role=main] h1, .single div[role=main] h1 {
     font-size: 2.25em;
     line-height: 1.33333em;
     padding-bottom: 0.66667em;
@@ -398,6 +390,7 @@ div.colors div {
     padding-left: 2.85714%;
     margin-right: -2.85714%;
     padding-right: 2.85714%;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.1);
   }
   article:before, article:after {
     content: "";
@@ -416,6 +409,36 @@ div.colors div {
     line-height: 1.8em;
     margin: 0 0 1.8em;
   }
+  .blog article h1 {
+    font-size: 1.5em;
+    line-height: 2em;
+    line-height: 1em;
+    border: none !important;
+    background: none !important;
+  }
+  .blog article + article:before {
+    display: block;
+    content: "\2022 \2022 \2022";
+    font-family: sans-serif;
+    color: #ffbb33;
+    font-size: 2.25em;
+    line-height: 1.33333em;
+    text-align: center;
+  }
+
+  .content-feature {
+    width: 31.42857%;
+    float: left;
+    margin-right: 2.85714%;
+    display: inline;
+  }
+  #featured-content .content-feature:nth-child(3) {
+    width: 31.42857%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -2em;
+    display: inline;
+  }
 
   .contextual > ul {
     font-size: 0.875em;
@@ -433,11 +456,12 @@ div.colors div {
 
   footer[role=contentinfo] {
     padding-top: 1.5em;
-    border-top: 1px dotted #ccc;
+    border-top: 1px solid rgba(60, 60, 60, 0.1);
     margin-left: -2.85714%;
     padding-left: 2.85714%;
     margin-right: -2.85714%;
     padding-right: 2.85714%;
+    background: white url("images/subtle_dots.png") fixed;
   }
   footer[role=contentinfo] p,
   footer[role=contentinfo] .vcard {
@@ -447,7 +471,7 @@ div.colors div {
     color: rgba(60, 60, 60, 0.75);
   }
   .kicker {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 0.8125em;
     line-height: 1.84615em;
     font-style: italic;
@@ -460,7 +484,7 @@ div.colors div {
   }
   .genealogy a + a:before {
     content: ": ";
-    color: #ccc;
+    color: rgba(60, 60, 60, 0.1);
     text-decoration: none !important;
     margin: 0 0.25em;
   }
@@ -505,7 +529,7 @@ div.colors div {
   }
 }
 @media screen and (min-width: 600px) {
-  .blog div[role=main] h1, .page div[role=main] h1, .single div[role=main] h1 {
+  div[role=main] > h1, .page div[role=main] h1, .single div[role=main] h1 {
     text-align: left;
     margin-left: -13.7931%;
     padding-left: 13.7931%;
@@ -515,14 +539,15 @@ div.colors div {
 }
 
 @media screen and (min-width: 600px) {
-  .entry {
+  .page .entry,
+  .single .entry {
     width: 68.96552%;
     float: left;
     margin-right: 3.44828%;
     display: inline;
   }
-
-  .contextual {
+  .page .contextual,
+  .single .contextual {
     width: 27.58621%;
     float: right;
     margin-right: 0;
@@ -533,6 +558,16 @@ div.colors div {
 @media screen and (min-width: 600px) {
   footer[role=contentinfo] {
     text-align: left;
+  }
+  footer[role=contentinfo]:before, footer[role=contentinfo]:after {
+    content: "";
+    display: table;
+  }
+  footer[role=contentinfo]:after {
+    clear: both;
+  }
+  footer[role=contentinfo], .ie footer[role=contentinfo] {
+    *zoom: 1;
   }
   footer[role=contentinfo] .vcard,
   footer[role=contentinfo] p {
