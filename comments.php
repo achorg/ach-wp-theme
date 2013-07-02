@@ -26,14 +26,14 @@
 		</h2>
 
 		<ol class="commentlist">
-		<?php wp_list_comments( array( 'callback' => 'neatline_theme_comment' ) ); ?>
+		<?php wp_list_comments(); ?>
 		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav">
-            <ul>
-			<li class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'achwptheme' ) ); ?></li>
-			<li class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'achwptheme' ) ); ?></li>
+		<nav class="pager">
+      <ul>
+			  <li class="older"><?php previous_comments_link( __( '&larr; Older Comments', 'achwptheme' ) ); ?></li>
+			  <li class="newer"><?php next_comments_link( __( 'Newer Comments &rarr;', 'achwptheme' ) ); ?></li>
 			</ul>
 		</nav>
 		<?php endif; // check for comment navigation ?>

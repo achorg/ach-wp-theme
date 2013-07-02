@@ -373,14 +373,14 @@ article {
   }
 }
 
-#pager {
+.pager {
   @include clearfix;
 
   li {
     float:left;
     width: 48%;
 
-    &#newer {
+    &.newer {
       float:right;
       text-align:right;
     }

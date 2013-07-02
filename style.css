@@ -466,25 +466,25 @@ div.colors div {
     font-weight: bold;
   }
 
-  #pager:before, #pager:after {
+  .pager:before, .pager:after {
     content: "";
     display: table;
   }
-  #pager:after {
+  .pager:after {
     clear: both;
   }
-  #pager, .ie #pager {
+  .pager, .ie .pager {
     *zoom: 1;
   }
-  #pager li {
+  .pager li {
     float: left;
     width: 48%;
   }
-  #pager li#newer {
+  .pager li.newer {
     float: right;
     text-align: right;
   }
-  #pager .kicker {
+  .pager .kicker {
     display: block;
     font-size: 0.6875em;
     line-height: 2.18182em;
