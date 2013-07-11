@@ -433,13 +433,6 @@ div.colors div {
   article, .ie article {
     *zoom: 1;
   }
-  .page article .entry > p:first-child, .single article .entry > p:first-child {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 1.25em;
-    line-height: 1.2em;
-    line-height: 1.8em;
-    margin: 0 0 1.8em;
-  }
   .blog article h1 {
     font-size: 1.5em;
     line-height: 2em;

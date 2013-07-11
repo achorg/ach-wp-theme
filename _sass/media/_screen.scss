@@ -333,17 +333,6 @@ div[role=main] {
 
 article {
   @include clearfix;
-  .entry {
-    .page &,
-    .single & {
-      & > p:first-child {
-        font-family: $sans-serif;
-        @include adjust-font-size-to(20px);
-        @include adjust-leading-to(1.5,20px);
-        margin: 0 0 rhythm(1.5, 20px);
-      }
-    }
-  }
 
   h1 {
     .blog & {
