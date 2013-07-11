@@ -452,6 +452,26 @@ div.colors div {
     margin-bottom: 1.5em;
     letter-spacing: 0.375em;
   }
+  article footer .author-picture {
+    display: block;
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 6px;
+  }
+  article footer .author-picture img {
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+    border-radius: 24px;
+  }
+  article footer p {
+    margin: 0;
+    line-height: 3em;
+    font-weight: bold;
+    color: rgba(60, 60, 60, 0.5);
+  }
 
   .content-feature {
     width: 31.42857%;
@@ -682,7 +702,9 @@ div.colors div {
 
 @media screen and (min-width: 600px) {
   .page .entry,
-  .single .entry {
+  .page article footer,
+  .single .entry,
+  .single article footer {
     width: 68.96552%;
     float: left;
     margin-right: 3.44828%;

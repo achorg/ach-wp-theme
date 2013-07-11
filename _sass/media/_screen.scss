@@ -333,7 +333,6 @@ div[role=main] {
 
 article {
   @include clearfix;
-
   h1 {
     .blog & {
       @include adjust-font-size-to(24px);
@@ -354,6 +353,27 @@ article {
     @include trailer(1, 16px);
     letter-spacing: rhythm(0.25, 16px);
   }
+
+  footer {
+    .author-picture {
+      display:block;
+      float:left;
+      width: $base-line-height *2;
+      height: $base-line-height*2;
+      margin-right: 6px;
+      img {
+        @include border-radius($base-line-height);
+      }
+    }
+
+    p {
+      margin:0;
+      @include adjust-leading-to(2);
+      font-weight:bold;
+      color: $default-color-lighter;
+    }
+  }
+
 }
 
 .content-feature {
@@ -497,7 +517,8 @@ article {
 @media (min-width: $medium-screen) {
   .page,
   .single {
-    .entry {
+    .entry,
+    article footer {
       @include span-columns(7, 10);
     }
 
