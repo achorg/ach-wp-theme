@@ -263,6 +263,21 @@ div.colors div {
     list-style: lower-roman;
   }
 
+  input[type=text],
+  textarea {
+    display: block;
+    padding: 3px;
+    border: 1px solid #ccc;
+  }
+
+  label {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    color: rgba(60, 60, 60, 0.75);
+    font-size: 0.875em;
+    line-height: 1.71429em;
+  }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -546,6 +561,22 @@ div.colors div {
   }
   .commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
     background: #ff5533;
+  }
+
+  #commentform {
+    background: rgba(0, 0, 0, 0.0125);
+    padding: 1px 1.5em;
+  }
+  #commentform input[type=text] {
+    display: block;
+  }
+  #commentform .required {
+    color: #ffbb33;
+  }
+
+  .form-allowed-tags {
+    font-size: 0.875em;
+    line-height: 1.71429em;
   }
 
   .pager:before, .pager:after {

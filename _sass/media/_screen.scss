@@ -165,6 +165,20 @@ ul, ol {
   }
 }
 
+input[type=text],
+textarea {
+  display:block;
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+
+label {
+  font-family: $sans-serif;
+  font-weight:bold;
+  color: $default-color-light;
+  @include adjust-font-size-to(14px);
+}
+
 table {
   border-collapse:collapse;
   border-spacing:0;
@@ -451,6 +465,24 @@ article {
       background: $link-color;
     }
   }
+}
+
+#commentform {
+  background: rgba(0,0,0,0.0125);
+  padding: 1px rhythm(1);
+  input {
+    &[type=text] {
+      display:block;
+    }
+  }
+
+  .required {
+    color: $analogous-positive;
+  }
+}
+
+.form-allowed-tags {
+  @include adjust-font-size-to(14px);
 }
 
 .pager {
