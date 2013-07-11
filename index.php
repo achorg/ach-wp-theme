@@ -44,7 +44,7 @@
 
 </div>
 
-<?php if (is_single()): ?>
+<?php if (is_single() && ('' != get_the_author_meta('user_firstname'))): ?>
 <footer>
   <div class="author-info">
     <a class="author-picture" href="<?php echo get_the_author_meta('user_url'); ?>"><?php echo get_avatar(get_the_author_meta('ID'),120); ?></a>
