@@ -52,7 +52,8 @@
     <?php if ($description = get_the_author_meta('user_description')): ?>
     <div class="author-description"><?php echo wpautop($description); ?></div>
     <?php endif; ?>
-    <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="all-posts">See all posts by <?php echo get_the_author_meta('user_firstname'); ?></a>
+<?php /*
+  <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" class="all-posts">See all posts by <?php echo get_the_author_meta('user_firstname'); ?></a> */?>
   </div>
 </footer>
 <?php endif; ?>
