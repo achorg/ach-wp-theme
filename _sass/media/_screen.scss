@@ -516,9 +516,9 @@ article {
   }
 
   h3 {
-    @include adjust-font-size-to(18px);
-    @include adjust-leading-to(1, 18px);
-    margin:rhythm(1, 18px) 0 0;
+    @include adjust-font-size-to(16px);
+    @include adjust-leading-to(1, 16px);
+    margin:rhythm(1, 16px) 0 0;
   }
   p,ul,ol {
     @include adjust-font-size-to(14px);
