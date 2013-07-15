@@ -17,13 +17,21 @@
   </h1>
   </header>
 
-
 <div class="entry">
 <?php if (!is_singular()) { ?>
 
 	<?php the_excerpt(); ?>
 
 <?php } else { ?>
+<?php if(has_post_thumbnail()) : ?>
+  <figure class="featured-image">
+    <?php the_post_thumbnail('full'); ?>
+    <figcaption>
+      <?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+    </figcaption>
+  </figure>
+<?php endif; ?>
+
 	<?php the_content(__('Read the rest of this entry &raquo;','themename')); ?>
     
 	<?php wp_link_pages(array(

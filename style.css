@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -97,7 +96,7 @@ div.colors div {
   }
 
   html {
-    background: #f7f7f7 url("images/subtle_dots.png") fixed;
+    background: #f7f7f7 url("images/subtle_dots.gif") fixed;
   }
 
   body {
@@ -108,17 +107,16 @@ div.colors div {
     padding-right: 2.85714%;
     margin-left: auto;
     margin-right: auto;
-    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #33ddff), color-stop(50%, #33ddff), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff5533), color-stop(50%, #ff5533), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffbb33), color-stop(50%, #ffbb33), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(50%, #3c3c3c), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3377ff), color-stop(50%, #3377ff), color-stop(50%, transparent)), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(100%, #3c3c3c));
-    background: -webkit-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -webkit-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -webkit-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -webkit-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -webkit-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -webkit-linear-gradient(left, #3c3c3c, #3c3c3c);
-    background: -moz-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -moz-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -moz-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -moz-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -moz-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -moz-linear-gradient(left, #3c3c3c, #3c3c3c);
-    background: -o-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), -o-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), -o-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), -o-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), -o-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), -o-linear-gradient(left, #3c3c3c, #3c3c3c);
-    background: linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%), linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%), linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%), linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%), linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%), linear-gradient(left, #3c3c3c, #3c3c3c);
-    -webkit-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
-    -moz-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
-    -o-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
-    background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px;
-    background-repeat: repeat-x;
-    background-position: -10% 0;
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #33ddff), color-stop(50%, #33ddff), color-stop(50%, transparent)) repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff5533), color-stop(50%, #ff5533), color-stop(50%, transparent)) repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffbb33), color-stop(50%, #ffbb33), color-stop(50%, transparent)) repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(50%, #3c3c3c), color-stop(50%, transparent)) repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3377ff), color-stop(50%, #3377ff), color-stop(50%, transparent)) repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #3c3c3c), color-stop(100%, #3c3c3c)) repeat-x;
+    background: -webkit-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%) repeat-x, -webkit-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%) repeat-x, -webkit-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%) repeat-x, -webkit-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%) repeat-x, -webkit-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%) repeat-x, -webkit-linear-gradient(left, #3c3c3c, #3c3c3c) repeat-x;
+    background: -moz-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%) repeat-x, -moz-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%) repeat-x, -moz-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%) repeat-x, -moz-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%) repeat-x, -moz-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%) repeat-x, -moz-linear-gradient(left, #3c3c3c, #3c3c3c) repeat-x;
+    background: -o-linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%) repeat-x, -o-linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%) repeat-x, -o-linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%) repeat-x, -o-linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%) repeat-x, -o-linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%) repeat-x, -o-linear-gradient(left, #3c3c3c, #3c3c3c) repeat-x;
+    background: linear-gradient(left, #33ddff 0%, #33ddff 50%, transparent 50%) repeat-x, linear-gradient(left, #ff5533 0%, #ff5533 50%, transparent 50%) repeat-x, linear-gradient(left, #ffbb33 0%, #ffbb33 50%, transparent 50%) repeat-x, linear-gradient(left, #3c3c3c 0%, #3c3c3c 50%, transparent 50%) repeat-x, linear-gradient(left, #3377ff 0%, #3377ff 50%, transparent 50%) repeat-x, linear-gradient(left, #3c3c3c, #3c3c3c) repeat-x;
+    -webkit-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px, contain;
+    -moz-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px, contain;
+    -o-background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px, contain;
+    background-size: 57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px, contain;
+    background-position: -10% 0, -10% 0, -15% 0, -15% 0, -20% 0, -20% 0, bottom left;
     padding-top: 5px;
     background-color: #fff;
   }
@@ -343,13 +341,33 @@ div.colors div {
     letter-spacing: 0.375em;
   }
 
+  figcaption {
+    text-align: center;
+    color: rgba(60, 60, 60, 0.75);
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    font-style: italic;
+  }
+
+  .annual {
+    list-style: none;
+    margin-left: 0;
+  }
+  .annual li {
+    display: inline;
+  }
+  .annual li + li:before {
+    content: " |";
+    color: rgba(60, 60, 60, 0.5);
+  }
+
   header[role=banner] {
     border-bottom: 1px solid rgba(60, 60, 60, 0.1);
-    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.25)), color-stop(100%, rgba(255, 255, 255, 0.25))), url("images/subtle_dots.png");
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.png");
-    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.png");
-    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.png");
-    background: linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.png");
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.25)), color-stop(100%, rgba(255, 255, 255, 0.25))), url("images/subtle_dots.gif");
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.gif");
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.gif");
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.gif");
+    background: linear-gradient(left, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("images/subtle_dots.gif");
     background-attachment: fixed;
     margin-left: -2.85714%;
     padding-left: 2.85714%;
@@ -375,24 +393,64 @@ div.colors div {
     padding-top: 2.4em;
     margin: 0;
   }
-  header[role=banner] nav ul {
+  .home header[role=banner] {
+    background-image: none;
+    background-image: url("images/ach-logo.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: contain;
+  }
+  .home header[role=banner] h1 {
+    font-size: 1.875em;
+    line-height: 1.6em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    display: none;
+  }
+  .home header[role=banner] .teaser {
+    font-size: 1.25em;
+    line-height: 1.2em;
+    line-height: 1.8em;
+  }
+  .home #sitenav {
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0.5))), url("images/subtle_dots.gif");
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/subtle_dots.gif");
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/subtle_dots.gif");
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/subtle_dots.gif");
+    background: linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/subtle_dots.gif");
+    background-attachment: fixed;
+    float: none;
+    width: auto;
+    margin-right: auto;
+    *margin-left: auto;
+    display: block;
+    clear: both;
+    margin-left: -2.85714%;
+    padding-left: 2.85714%;
+    margin-right: -2.85714%;
+    padding-right: 2.85714%;
+    border-top: 1px solid rgba(60, 60, 60, 0.1);
+  }
+  .home #sitenav ul {
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+    text-align: justify;
+    width: 100%;
+  }
+  #sitenav ul {
     font-size: 0.9375em;
     line-height: 1.6em;
     line-height: 1.6em;
     padding-top: 3.2em;
     padding-bottom: 3.2em;
     font-family: "Noto Sans", sans-serif;
-    text-align: center;
     margin: 0;
   }
-  header[role=banner] nav li {
-    display: inline;
+  #sitenav li {
+    display: inline-block;
   }
-  header[role=banner] nav li + li:before {
-    content: " · ";
-    color: rgba(60, 60, 60, 0.5);
-  }
-  header[role=banner] nav li.current-menu-item a, header[role=banner] nav li.current_page_item a {
+  #sitenav li.current-menu-item a, #sitenav li.current_page_item a {
     color: #3c3c3c;
     border-bottom: 3px solid #3c3c3c;
     padding-bottom: 5px;
@@ -400,6 +458,15 @@ div.colors div {
 
   div[role=main] {
     padding: 1.5em 0;
+    background-image: url("images/ach-logo.png");
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-left: -2.85714%;
+    padding-left: 2.85714%;
+    margin-right: -2.85714%;
+    padding-right: 2.85714%;
   }
   div[role=main]:before, div[role=main]:after {
     content: "";
@@ -410,6 +477,9 @@ div.colors div {
   }
   div[role=main], .ie div[role=main] {
     *zoom: 1;
+  }
+  .home div[role=main] {
+    background-image: none;
   }
   div[role=main] > h1, .page div[role=main] h1, .single div[role=main] h1 {
     font-size: 2.25em;
@@ -473,26 +543,66 @@ div.colors div {
     color: rgba(60, 60, 60, 0.5);
   }
 
-  .content-feature {
-    width: 31.42857%;
-    float: left;
-    margin-right: 2.85714%;
-    display: inline;
-  }
-  #featured-content .content-feature:nth-child(3) {
-    width: 31.42857%;
+  .small-image {
     float: right;
-    margin-right: 0;
-    *margin-left: -2em;
-    display: inline;
+    width: 30%;
+    margin-top: 0;
   }
 
+  .content-feature {
+    clear: both;
+  }
+  .content-feature h2 {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    line-height: 1.33333em;
+  }
+  .content-feature h3 {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    line-height: 1.33333em;
+    margin: 1.33333em 0 0;
+  }
+  .content-feature p, .content-feature ul, .content-feature ol {
+    margin: 0 0 1.5em;
+  }
+  .content-feature ul, .content-feature ol {
+    list-style: none;
+  }
+  .content-feature li {
+    line-height: 3em;
+  }
+  .content-feature li:before, .content-feature li:after {
+    content: "";
+    display: table;
+  }
+  .content-feature li:after {
+    clear: both;
+  }
+  .content-feature li, .ie .content-feature li {
+    *zoom: 1;
+  }
+  .content-feature li .post-date {
+    float: right;
+    text-align: right;
+  }
+  .content-feature li + li {
+    border-top: 1px dotted rgba(60, 60, 60, 0.5);
+  }
+  .content-feature li a {
+    text-decoration: none;
+  }
+
+  .contextual {
+    clear: right;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.1);
+  }
   .contextual > ul {
     font-size: 0.875em;
     line-height: 1.71429em;
   }
   .contextual li {
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(60, 60, 60, 0.1);
   }
   .contextual li a {
     display: block;
@@ -624,7 +734,7 @@ div.colors div {
     padding-left: 2.85714%;
     margin-right: -2.85714%;
     padding-right: 2.85714%;
-    background: white url("images/subtle_dots.png") fixed;
+    background: white url("images/subtle_dots.gif") fixed;
   }
   footer[role=contentinfo] p,
   footer[role=contentinfo] .vcard {
@@ -669,8 +779,26 @@ div.colors div {
     padding-bottom: 3.2em;
   }
 }
+@media screen and (min-width: 1100px) {
+  .home header[role=banner] {
+    background-position: bottom left;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .home header[role=banner] .teaser {
+    width: 48.57143%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -2em;
+    display: inline;
+    margin: 0;
+    padding-top: 3.6em;
+    padding-bottom: 3.6em;
+  }
+}
+
 @media screen and (min-width: 600px) {
-  header[role=banner] nav {
+  #sitenav {
     width: 48.57143%;
     float: right;
     margin-right: 0;
@@ -679,8 +807,11 @@ div.colors div {
   }
 }
 @media screen and (min-width: 600px) {
-  header[role=banner] nav ul {
-    text-align: right;
+  .home #sitenav {
+    margin-left: -2.85714%;
+    padding-left: 2.85714%;
+    margin-right: -2.85714%;
+    padding-right: 2.85714%;
   }
 }
 @media screen and (min-width: 600px) {
@@ -697,6 +828,36 @@ div.colors div {
     padding-left: 13.7931%;
     margin-right: -13.7931%;
     padding-right: 13.7931%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .featured-image {
+    width: 85%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -2em;
+    display: inline;
+    margin-right: -60.0%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #featured-content .primary {
+    width: 58.62069%;
+    float: left;
+    margin-right: 3.44828%;
+    display: inline;
+  }
+}
+@media screen and (min-width: 600px) {
+  #featured-content .secondary {
+    width: 37.93103%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -2em;
+    display: inline;
   }
 }
 
@@ -736,9 +897,8 @@ div.colors div {
   footer[role=contentinfo] .vcard,
   footer[role=contentinfo] p {
     width: 31.42857%;
-    float: right;
-    margin-right: 0;
-    *margin-left: -2em;
+    float: left;
+    margin-right: 2.85714%;
     display: inline;
     clear: right;
   }

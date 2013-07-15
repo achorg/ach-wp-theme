@@ -7,7 +7,7 @@
 @include establish-baseline;
 
 html {
-    background: #f7f7f7 url('images/subtle_dots.png') fixed;
+    background: #f7f7f7 url('images/subtle_dots.gif') fixed;
 }
 
 body {
@@ -15,17 +15,15 @@ body {
   color: $default-color;
   @include container;
   @include background(
-      linear-gradient(left, color-stops($complementary-color 0, $complementary-color 50%, transparent 50%)),
-    linear-gradient(left, color-stops($base-color 0, $base-color 50%, transparent 50%)),
-    linear-gradient(left, color-stops($analogous-positive 0, $analogous-positive 50%, transparent 50%)),
-    linear-gradient(left, color-stops($default-color 0, $default-color 50%, transparent 50%)),
-    linear-gradient(left, color-stops($complementary-analogous-positive 0, $complementary-analogous-positive 50%, transparent 50%)),
-    linear-gradient(left, color-stops($default-color, $default-color))
+    linear-gradient(left, color-stops($complementary-color 0, $complementary-color 50%, transparent 50%)) repeat-x,
+    linear-gradient(left, color-stops($base-color 0, $base-color 50%, transparent 50%)) repeat-x,
+    linear-gradient(left, color-stops($analogous-positive 0, $analogous-positive 50%, transparent 50%)) repeat-x,
+    linear-gradient(left, color-stops($default-color 0, $default-color 50%, transparent 50%)) repeat-x,
+    linear-gradient(left, color-stops($complementary-analogous-positive 0, $complementary-analogous-positive 50%, transparent 50%)) repeat-x,
+    linear-gradient(left, color-stops($default-color, $default-color)) repeat-x
     );
-
-    @include background-size(57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px);
-    background-repeat: repeat-x;
-    background-position: -10% 0;
+    @include background-size(57% 5px, 41% 5px, 37% 5px, 29% 5px, 13% 5px, 7% 5px, contain);
+    background-position: -10% 0, -10% 0, -15% 0, -15% 0, -20% 0, -20% 0, bottom left;
     padding-top: 5px;
   background-color:#fff;
 }
@@ -239,12 +237,33 @@ hr {
   }
 }
 
+figcaption {
+  text-align:center;
+  color: $default-color-light;
+  @include adjust-font-size-to(14px);
+  font-style:italic;
+}
+
+.annual {
+  list-style:none;
+  margin-left:0;
+
+  li {
+    display:inline;
+
+    & + li:before {
+      content: " |";
+      color: $default-color-lighter;
+    }
+  }
+}
+
 header[role=banner] {
   border-bottom:1px solid $default-color-lightest;
   @include background(
     linear-gradient(left, rgba(#fff, 0.25), rgba(#fff, 0.25)),
-    url("images/subtle_dots.png")
-    );
+    url("images/subtle_dots.gif")
+  );
   background-attachment:fixed;
   @include clearfix;
   @include bleed(gutter(12));
@@ -265,10 +284,71 @@ header[role=banner] {
     }
   }
 
-  nav {
+  .home & {
+    background-image:none;
+    background-image:url('images/ach-logo.png');
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    background-attachment:inherit;
+    background-size: contain;
 
+    @media (min-width: $large-screen) {
+      background-position: bottom left;
+    }
+
+    h1 {
+      @include adjust-font-size-to(30px);
+      @include padding-leader(5, 30px);
+      @include padding-trailer(5, 30px);
+      display:none;
+
+    }
+
+    .teaser {
+      @include adjust-font-size-to(20px);
+      @include adjust-leading-to(1.5, 20px);
+      @media (min-width: $large-screen) {
+      @include span-columns(6 omega, 12);
+      margin:0;
+      @include padding-leader(3, 20px);
+      @include padding-trailer(3, 20px);
+    }
+    }
+  }
+
+}
+
+
+  #sitenav {
+    
     @media (min-width: $medium-screen) {
       @include span-columns(6 omega);
+    }
+
+    .home & {
+      @include background(
+        linear-gradient(left, rgba(#fff, 0.5), rgba(#fff, 0.5)),
+        url("images/subtle_dots.gif")
+      );
+
+      background-attachment:fixed;
+      @include reset-columns();
+      clear:both;
+      @include bleed($grid-padding);
+      border-top: 1px solid $default-color-lightest;
+
+      @media (min-width: $medium-screen) {
+        @include bleed($grid-padding);
+      }
+
+      ul {
+        @include padding-leader(1, 15px);
+        @include padding-trailer(1, 15px);
+        text-align:justify;
+        width: 100%;
+
+      }
+
     }
 
     ul {
@@ -277,19 +357,10 @@ header[role=banner] {
       @include padding-leader(2, 15px);
       @include padding-trailer(2, 15px);
       font-family: $sans-serif;
-      text-align:center;
       margin:0;
-      @media (min-width: $medium-screen) {
-        text-align:right;
-      }
     }
     li {
-      display:inline;
-
-      & + li:before {
-        content: " · ";
-        color: $default-color-lighter;
-      }
+      display:inline-block;
 
       &.current-menu-item,
       &.current_page_item {
@@ -302,11 +373,21 @@ header[role=banner] {
     }
 
   }
-}
 
 div[role=main] {
   @include clearfix;
   padding: rhythm(1) 0;
+  background-image: url('images/ach-logo.png');
+  background-size:contain;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-position: bottom center;
+  @include bleed($grid-padding);
+
+  .home & {
+    background-image:none;
+  }
+
   @media (min-width: $medium-screen) {
     @include pad(1,1);
     padding-bottom: rhythm(2);
@@ -376,21 +457,81 @@ article {
 
 }
 
-.content-feature {
-  @include span-columns(4, 12);
+.featured-image {
+    @media (min-width: $medium-screen) {
+    @include span-columns(6 omega, 7);
+  @include pull(4, 7, right);
+  margin-left: gutter(7);
+}
+}
 
-  #featured-content &:nth-child(3) {
-    @include span-columns(4 omega, 12);
+
+#featured-content {
+  .primary {
+    @media (min-width: $medium-screen) {
+      @include span-columns(6, 10);
+    }
+  }
+
+  .secondary {
+    @media (min-width: $medium-screen) {
+    @include span-columns(4 omega, 10);
+    }
+  }
+}
+
+.small-image {
+  float:right;
+  width: 30%;
+  margin-top:0;
+}
+
+.content-feature {
+  clear:both;
+  h2 {
+    @include adjust-font-size-to(18px);
+    @include adjust-leading-to(1, 18px);
+  }
+
+  h3 {
+    @include adjust-font-size-to(18px);
+    @include adjust-leading-to(1, 18px);
+    margin:rhythm(1, 18px) 0 0;
+  }
+  p,ul,ol {
+    margin: 0 0 rhythm(1);
+  }
+
+  ul,ol {
+    list-style:none;
+  }
+
+  li {
+    @include clearfix;
+    .post-date {
+      float:right;
+      text-align:right;
+    }
+    @include adjust-leading-to(1.75, 14px);
+
+    & + li {
+      border-top:1px dotted $default-color-lighter;
+    }
+    a {
+      text-decoration:none;
+    }
   }
 }
 
 .contextual {
+  clear:right;
+  border-bottom: 1px solid $default-color-lightest;
   & > ul {
     @include adjust-font-size-to(14px);
   }
 
   li {
-    border-top: 1px solid #eee;
+    border-top: 1px solid $default-color-lightest;
 
     a {
       display:block;
@@ -532,7 +673,7 @@ footer[role=contentinfo] {
   padding-top: rhythm(1);
   border-top: 1px solid $default-color-lightest;
   @include bleed($grid-padding);
-  background: #fff url('images/subtle_dots.png') fixed;
+  background: #fff url('images/subtle_dots.gif') fixed;
 
   p,
   .vcard {
@@ -546,7 +687,7 @@ footer[role=contentinfo] {
     text-align:left;
     .vcard,
     p {
-      @include span-columns(4 omega);
+      @include span-columns(4, 12);
       clear:right;
     }
   }

@@ -31,6 +31,15 @@ if (have_posts()) : while (have_posts()) : the_post();?>
 <h1><?php the_title(); ?></h1>
 
 <div class="entry">
+<?php if(has_post_thumbnail()) : ?>
+  <figure class="featured-image">
+    <?php the_post_thumbnail('full'); ?>
+    <figcaption>
+      <?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+    </figcaption>
+  </figure>
+<?php endif; ?>
+
 <?php the_content(); ?>
 </div>
 

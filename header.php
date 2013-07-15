@@ -47,10 +47,14 @@
         </a>
     </h1>
 
-    <nav id="sitenav">
-        <?php wp_nav_menu('theme_location=header'); ?> 
-    </nav>
+<?php if (is_front_page()): ?>
+<p class="teaser">
+<a href="<?php bloginfo('home'); ?>"><?php bloginfo('name'); ?></a> is your professional society for the digital humanities! Through our <a href="/activities">activities</a>, <a href="/conferences">conferences</a>, and <a href="/publications">publications</a>, we support computer-assisted research, teaching, and software and content development in humanistic disciplines. <a href="/membership">Join today!</a></p>
+<?php endif; ?>
 
+    <nav id="sitenav">
+        <?php wp_nav_menu('theme_location=header'); ?>
+    </nav>
 </header><!--/masthead-->
 
 <div id="content" role="main">
