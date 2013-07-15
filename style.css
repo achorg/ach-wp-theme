@@ -465,6 +465,7 @@ div.colors div {
   }
 
   div[role=main] {
+    overflow-x: hidden;
     padding: 1.5em 0;
     background-image: url("images/ach-logo.png");
     background-size: contain;
@@ -489,7 +490,7 @@ div.colors div {
   .home div[role=main] {
     background-image: none;
   }
-  div[role=main] > h1, .page div[role=main] h1, .single div[role=main] h1 {
+  div[role=main] > h1, .page div[role=main] h1 {
     font-size: 2.25em;
     line-height: 1.33333em;
     padding-bottom: 0.66667em;
@@ -517,6 +518,14 @@ div.colors div {
     line-height: 1em;
     border: none !important;
     background: none !important;
+  }
+  .single article h1 {
+    font-size: 2.25em;
+    line-height: 1.33333em;
+    padding-bottom: 0.66667em;
+    margin-bottom: 1.33333em;
+    text-align: center;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.1);
   }
   .blog article + article:before {
     display: block;
@@ -868,7 +877,7 @@ div.colors div {
   }
 }
 @media screen and (min-width: 600px) {
-  div[role=main] > h1, .page div[role=main] h1, .single div[role=main] h1 {
+  div[role=main] > h1, .page div[role=main] h1 {
     text-align: left;
     margin-left: -13.7931%;
     padding-left: 13.7931%;
@@ -877,6 +886,15 @@ div.colors div {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .single article h1 {
+    text-align: left;
+    margin-left: -34.48276%;
+    padding-left: 34.48276%;
+    margin-right: -34.48276%;
+    padding-right: 34.48276%;
+  }
+}
 @media screen and (min-width: 600px) {
   .featured-image {
     width: 85%;
@@ -908,22 +926,23 @@ div.colors div {
 }
 
 @media screen and (min-width: 600px) {
-  .page .entry,
-  .page article footer,
-  .single .entry,
-  .single article footer {
+  .page .entry {
     width: 68.96552%;
     float: left;
     margin-right: 3.44828%;
     display: inline;
   }
-  .page .contextual,
-  .single .contextual {
+  .page .contextual {
     width: 27.58621%;
     float: right;
     margin-right: 0;
     *margin-left: -2em;
     display: inline;
+  }
+
+  .single article {
+    margin-left: 10.34483%;
+    margin-right: 10.34483%;
   }
 }
 @media screen and (min-width: 600px) {

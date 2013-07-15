@@ -380,6 +380,8 @@ header[role=banner] {
   }
 
 div[role=main] {
+    overflow-x:hidden;
+  
   @include clearfix;
   padding: rhythm(1) 0;
   background-image: url('images/ach-logo.png');
@@ -399,8 +401,7 @@ div[role=main] {
   }
 
     & >,
-    .page &,
-    .single & {
+    .page & {
       h1 {
       @include adjust-font-size-to(36px);
       @include padding-trailer(1, 36px);
@@ -425,6 +426,21 @@ article {
       @include adjust-leading-to(1, 24px);
       border:none !important;
       background:none!important;
+    }
+  }
+
+    .single & {
+      h1 {
+      @include adjust-font-size-to(36px);
+      @include padding-trailer(1, 36px);
+      @include trailer(2, 36px);
+      text-align:center;
+      border-bottom: 1px solid $default-color-lightest;
+
+      @media (min-width: $medium-screen) {
+        text-align:left;
+        @include bleed(space(3, 10) + gutter(10));
+      }
     }
   }
 
@@ -691,16 +707,20 @@ article {
 }
 
 @media (min-width: $medium-screen) {
-  .page,
-  .single {
-    .entry,
-    article footer {
+  .page {
+    .entry {
       @include span-columns(7, 10);
     }
 
     .contextual {
       @include span-columns(3 omega, 10);
     }
+  }
+
+  .single {
+    article {
+        @include squish(1,1,10);
+      }
   }
 }
 
