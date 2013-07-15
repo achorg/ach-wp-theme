@@ -320,9 +320,9 @@ header[role=banner] {
 
 
   #sitenav {
-    
     @media (min-width: $medium-screen) {
       @include span-columns(6 omega);
+      text-align:right;
     }
 
     .home & {
@@ -330,7 +330,7 @@ header[role=banner] {
         linear-gradient(left, rgba(#fff, 0.5), rgba(#fff, 0.5)),
         url("images/subtle_dots.gif")
       );
-
+      text-align:left;
       background-attachment:fixed;
       @include reset-columns();
       clear:both;
@@ -342,11 +342,10 @@ header[role=banner] {
       }
 
       ul {
-        @include padding-leader(1, 15px);
-        @include padding-trailer(1, 15px);
-        text-align:justify;
-        width: 100%;
-
+        @include adjust-font-size-to(18px);
+        @include padding-leader(1, 18px);
+        @include padding-trailer(1, 18px);
+        padding-left: columns(1);
       }
 
     }
@@ -361,6 +360,12 @@ header[role=banner] {
     }
     li {
       display:inline-block;
+
+      & + li:before {
+        content: "· ";
+        color: $default-color-light;
+        padding: 0 0.25em;
+      }
 
       &.current-menu-item,
       &.current_page_item {
@@ -469,13 +474,13 @@ article {
 #featured-content {
   .primary {
     @media (min-width: $medium-screen) {
-      @include span-columns(6, 10);
+      @include span-columns(5, 10);
     }
   }
 
   .secondary {
     @media (min-width: $medium-screen) {
-    @include span-columns(4 omega, 10);
+    @include span-columns(5 omega, 10);
     }
   }
 }
@@ -713,7 +718,7 @@ footer[role=contentinfo] {
     text-align:left;
     .vcard,
     p {
-      @include span-columns(4, 12);
+      @include span-columns(4 omega, 12);
       clear:right;
     }
   }

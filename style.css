@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -419,6 +420,7 @@ div.colors div {
     background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/subtle_dots.gif");
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/subtle_dots.gif");
     background: linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/subtle_dots.gif");
+    text-align: left;
     background-attachment: fixed;
     float: none;
     width: auto;
@@ -433,10 +435,11 @@ div.colors div {
     border-top: 1px solid rgba(60, 60, 60, 0.1);
   }
   .home #sitenav ul {
-    padding-top: 1.6em;
-    padding-bottom: 1.6em;
-    text-align: justify;
-    width: 100%;
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-top: 1.33333em;
+    padding-bottom: 1.33333em;
+    padding-left: 5.71429%;
   }
   #sitenav ul {
     font-size: 0.9375em;
@@ -449,6 +452,11 @@ div.colors div {
   }
   #sitenav li {
     display: inline-block;
+  }
+  #sitenav li + li:before {
+    content: "· ";
+    color: rgba(60, 60, 60, 0.75);
+    padding: 0 0.25em;
   }
   #sitenav li.current-menu-item a, #sitenav li.current_page_item a {
     color: #3c3c3c;
@@ -838,6 +846,7 @@ div.colors div {
     margin-right: 0;
     *margin-left: -2em;
     display: inline;
+    text-align: right;
   }
 }
 @media screen and (min-width: 600px) {
@@ -879,7 +888,7 @@ div.colors div {
 
 @media screen and (min-width: 600px) {
   #featured-content .primary {
-    width: 58.62069%;
+    width: 48.27586%;
     float: left;
     margin-right: 3.44828%;
     display: inline;
@@ -887,7 +896,7 @@ div.colors div {
 }
 @media screen and (min-width: 600px) {
   #featured-content .secondary {
-    width: 37.93103%;
+    width: 48.27586%;
     float: right;
     margin-right: 0;
     *margin-left: -2em;
@@ -931,8 +940,9 @@ div.colors div {
   footer[role=contentinfo] .vcard,
   footer[role=contentinfo] p {
     width: 31.42857%;
-    float: left;
-    margin-right: 2.85714%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -2em;
     display: inline;
     clear: right;
   }

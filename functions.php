@@ -183,4 +183,3 @@ function achwptheme_theme_comment( $comment, $args, $depth ) {
 <?php
 }
 
-remove_filter('the_content', 'wpautop');
