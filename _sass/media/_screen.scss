@@ -496,6 +496,7 @@ article {
   h2 {
     @include adjust-font-size-to(18px);
     @include adjust-leading-to(1, 18px);
+    margin: rhythm(1, 18px) 0 0;
   }
 
   h3 {
@@ -504,7 +505,8 @@ article {
     margin:rhythm(1, 18px) 0 0;
   }
   p,ul,ol {
-    margin: 0 0 rhythm(1);
+    @include adjust-font-size-to(14px);
+    margin: 0 0 rhythm(1, 14px);
   }
 
   ul,ol {
@@ -516,11 +518,13 @@ article {
     .post-date {
       float:right;
       text-align:right;
+      font-style:italic;
+      color: $default-color-light;
     }
-    @include adjust-leading-to(1.75, 14px);
 
     & + li {
       border-top:1px dotted $default-color-lighter;
+      @include adjust-leading-to(1.75, 14px);
     }
     a {
       text-decoration:none;

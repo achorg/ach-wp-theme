@@ -564,6 +564,7 @@ div.colors div {
     font-size: 1.125em;
     line-height: 1.33333em;
     line-height: 1.33333em;
+    margin: 1.33333em 0 0;
   }
   .content-feature h3 {
     font-size: 1.125em;
@@ -572,13 +573,12 @@ div.colors div {
     margin: 1.33333em 0 0;
   }
   .content-feature p, .content-feature ul, .content-feature ol {
-    margin: 0 0 1.5em;
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    margin: 0 0 1.71429em;
   }
   .content-feature ul, .content-feature ol {
     list-style: none;
-  }
-  .content-feature li {
-    line-height: 3em;
   }
   .content-feature li:before, .content-feature li:after {
     content: "";
@@ -593,9 +593,12 @@ div.colors div {
   .content-feature li .post-date {
     float: right;
     text-align: right;
+    font-style: italic;
+    color: rgba(60, 60, 60, 0.75);
   }
   .content-feature li + li {
     border-top: 1px dotted rgba(60, 60, 60, 0.5);
+    line-height: 3em;
   }
   .content-feature li a {
     text-decoration: none;
