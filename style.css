@@ -727,6 +727,37 @@ div.colors div {
     line-height: 2.18182em;
   }
 
+  .person {
+    margin: 1.5em 0;
+    border-bottom: 1px dotted rgba(60, 60, 60, 0.5);
+  }
+  .person:before, .person:after {
+    content: "";
+    display: table;
+  }
+  .person:after {
+    clear: both;
+  }
+  .person, .ie .person {
+    *zoom: 1;
+  }
+  .person img {
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+  .person ul {
+    list-style: none;
+  }
+  .person h3 {
+    margin-top: 0;
+  }
+  .person h3,
+  .person p,
+  .person ul {
+    margin-left: 130px;
+  }
+
   footer[role=contentinfo] {
     padding-top: 1.5em;
     border-top: 1px solid rgba(60, 60, 60, 0.1);
@@ -749,6 +780,9 @@ div.colors div {
     line-height: 1.84615em;
     line-height: 1.84615em;
     color: rgba(60, 60, 60, 0.5);
+  }
+  .kicker + h3 {
+    margin-top: 0 !important;
   }
 
   .genealogy a {

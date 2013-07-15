@@ -655,6 +655,32 @@ article {
   }
 }
 
+.person {
+  margin: rhythm(1) 0;
+  border-bottom: 1px dotted $default-color-lighter;
+  @include clearfix;
+
+  img {
+    float:left;
+    width: 100px;
+    height: 100px;
+  }
+
+  ul {
+    list-style:none;
+  }
+
+  h3 {
+    margin-top:0;
+  }
+
+  h3,
+  p,
+  ul {
+    margin-left: 130px;
+  }
+}
+
 @media (min-width: $medium-screen) {
   .page,
   .single {
@@ -698,6 +724,10 @@ footer[role=contentinfo] {
   @include adjust-font-size-to(13px);
   @include adjust-leading-to(1, 13px);
   color: $default-color-lighter;
+
+  & + h3 {
+    margin-top:0 !important;
+  }
 }
 
 .genealogy {
