@@ -94,6 +94,9 @@ h6 {
 
 p {
   margin: rhythm(1) 0;
+  &:empty {
+    display:none;
+  }
 }
 
 blockquote {

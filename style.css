@@ -205,6 +205,9 @@ div.colors div {
   p {
     margin: 1.5em 0;
   }
+  p:empty {
+    display: none;
+  }
 
   blockquote {
     margin: 0 1.5em 0 0;
