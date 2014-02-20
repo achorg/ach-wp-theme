@@ -5,11 +5,11 @@
 <div class="primary">
 <div class="conference content-feature">
 <figure class="small-image">
-<img src="/wp-content/uploads/2013/06/DH13_simplified.png">
+<img src="/wp-content/uploads/2014/02/dh2014logo.png">
 </figure>
-<h2><a href="/conferences">Digital Humanities 2013</a></h2>
-<p>Our annual conference, to be held at the University of Nebraska in Lincoln, Nebraska, July 16–19.</p>
-<p><a href="/conferences">Learn More</a> | <a href="http://dh2013.unl.edu">Conference Website</a></p>
+<h2><a href="/conferences">Digital Humanities 2014</a></h2>
+<p>Our annual conference, jointly hosted by the University of Lausanne (UNIL) and Ecole Polytechnique Fédérale de Lausanne (EPFL)</p>
+<p><a href="/conferences">Learn More</a> | <a href="http://dh2014.org" title="Web site for the 2014 conference.">Conference Website</a></p>
 </div>
 <?php dynamic_sidebar( 'primary-home-widget-area' ); ?></div>
 <div class="secondary"><?php dynamic_sidebar( 'secondary-home-widget-area' ); ?></div>
