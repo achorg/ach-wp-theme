@@ -43,7 +43,7 @@ if (have_posts()) : while (have_posts()) : the_post();?>
 <?php the_content(); ?>
 </div>
 
-<?php if(is_single()): comments_template(); endif; ?>
+<?php comments_template(); ?>
 
 <?php if($pageNav): ?>
 <nav role="contextual" class="contextual">
