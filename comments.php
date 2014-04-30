@@ -3,6 +3,8 @@
  * Comments
  */
 ?>
+    <div id="comments">
+
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'achwptheme' ); ?></p>
 	</div><!-- #comments -->
@@ -17,7 +19,6 @@
 
   <?php if ( have_comments() ) : ?>
 <hr>
-    <div id="comments">
 
 		<h2 id="comments-title">
 			<?php
@@ -38,7 +39,6 @@
 			</ul>
 		</nav>
 		<?php endif; // check for comment navigation ?>
-  </div>
 	<?php
 		/* If there are no comments and comments are closed, let's leave a little note, shall we?
 		 * But we don't want the note on pages or post types that do not support comments.
@@ -49,4 +49,5 @@
 	<?php endif; ?>
 
 	<?php comment_form(); ?>
+  </div>
 

@@ -639,6 +639,10 @@ div.colors div {
     font-weight: bold;
   }
 
+  #comments {
+    clear: left;
+  }
+
   .commentlist {
     list-style: none;
     margin-left: -40px;
