@@ -41,9 +41,10 @@ if (have_posts()) : while (have_posts()) : the_post();?>
 <?php endif; ?>
 
 <?php the_content(); ?>
-</div>
 
 <?php comments_template(); ?>
+</div>
+
 
 <?php if($pageNav): ?>
 <nav role="contextual" class="contextual">
