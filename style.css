@@ -470,8 +470,12 @@ div.colors div {
   div[role=main] {
     overflow-x: hidden;
     padding: 1.5em 0;
-    background-image: url("images/ach-logo.png");
-    background-size: contain;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0.5))), url("images/ach-logo.png");
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/ach-logo.png");
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/ach-logo.png");
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/ach-logo.png");
+    background: linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/ach-logo.png");
+    background-size: auto, contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: bottom center;
