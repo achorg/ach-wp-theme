@@ -42,11 +42,9 @@
 
 <header role="banner">
 
-    <h1 id="site-title">
-        <a href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>">
-        <?php bloginfo('name'); ?>
+        <a id="site-title" href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>">
+        <?php include(get_stylesheet_directory() . '/images/ach-logo.svg'); ?>
         </a>
-    </h1>
 
 <?php if (is_front_page()): ?>
 <p class="teaser">

@@ -301,9 +301,10 @@ div.colors div {
     text-align: left;
   }
 
-  img {
+  img,
+  svg {
     max-width: 100%;
-    width: auto;
+    max-height: 100%;
     height: auto;
   }
 
@@ -421,34 +422,19 @@ div.colors div {
   header[role=banner], .ie header[role=banner] {
     *zoom: 1;
   }
-  header[role=banner] h1 {
-    text-align: center;
-    font-family: "Noto Sans", sans-serif;
-    font-size: 1.25em;
-    line-height: 1.2em;
-    line-height: 1.2em;
-    padding-top: 2.4em;
-    margin: 0;
+  header[role=banner] .teaser {
+    font-size: 0.875em;
+    line-height: 1.71429em;
+    line-height: 1.71429em;
   }
-  .home header[role=banner] {
-    background-image: none;
-    background-image: url("images/ach-logo.png");
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-attachment: inherit;
-    background-size: contain;
+  #site-title {
+    display: block;
+    min-width: 30%;
+    max-width: 400px;
+    margin: 1.5em auto;
   }
-  .home header[role=banner] h1 {
-    font-size: 1.875em;
-    line-height: 1.6em;
-    padding-top: 4em;
-    padding-bottom: 4em;
+  #sitenav .children {
     display: none;
-  }
-  .home header[role=banner] .teaser {
-    font-size: 1.25em;
-    line-height: 1.2em;
-    line-height: 1.8em;
   }
   .home #sitenav {
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0.5))), url("images/subtle_dots.gif");
@@ -877,34 +863,25 @@ div.colors div {
   }
 }
 @media screen and (min-width: 600px) {
-  header[role=banner] h1 {
-    text-align: left;
-    font-size: 0.9375em;
-    line-height: 1.6em;
-    line-height: 1.6em;
-    width: 48.57143%;
-    float: left;
-    margin-right: 2.85714%;
-    display: inline;
-    padding-top: 3.2em;
-    padding-bottom: 3.2em;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .home header[role=banner] {
-    background-position: bottom left;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .home header[role=banner] .teaser {
+  header[role=banner] .teaser {
     width: 48.57143%;
     float: right;
     margin-right: 0;
     *margin-left: -2em;
     display: inline;
     margin: 0;
-    padding-top: 3.6em;
-    padding-bottom: 3.6em;
+    padding-top: 1.71429em;
+    padding-bottom: 1.71429em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #site-title {
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    display: inline;
+    margin: 1.5em 0;
   }
 }
 

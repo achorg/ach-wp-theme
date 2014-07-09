@@ -197,10 +197,11 @@ th {
   text-align:left;
 }
 
-img {
-  max-width:100%;
-  width:auto;
-  height:auto;
+img,
+svg {
+    max-width:100%;
+    max-height:100%;
+    height:auto;
 }
 
 em,i {
@@ -305,62 +306,41 @@ header[role=banner] {
   background-attachment:fixed;
   @include clearfix;
   @include bleed(gutter(12));
-  h1 {
-    text-align:center;
-    font-family: $sans-serif;
-    @include adjust-font-size-to(20px);
-    @include adjust-leading-to(1, 20px);
-    @include padding-leader(2, 20px);
-    margin:0;
-    @media (min-width: $medium-screen) {
-      text-align:left;
-      @include adjust-font-size-to(15px);
-      @include adjust-leading-to(1, 15px);
-      @include span-columns(6);
-      @include padding-leader(2, 15px);
-      @include padding-trailer(2, 15px);
-    }
-  }
-
-  .home & {
-    background-image:none;
-    background-image:url('images/ach-logo.png');
-    background-position:bottom center;
-    background-repeat:no-repeat;
-    background-attachment:inherit;
-    background-size: contain;
-
-    @media (min-width: $large-screen) {
-      background-position: bottom left;
-    }
-
-    h1 {
-      @include adjust-font-size-to(30px);
-      @include padding-leader(5, 30px);
-      @include padding-trailer(5, 30px);
-      display:none;
-
-    }
 
     .teaser {
-      @include adjust-font-size-to(20px);
-      @include adjust-leading-to(1.5, 20px);
-      @media (min-width: $large-screen) {
+      @include adjust-font-size-to(14px);
+      @include adjust-leading-to(1, 14px);
+      @media (min-width: $medium-screen) {
       @include span-columns(6 omega, 12);
-      margin:0;
-      @include padding-leader(3, 20px);
-      @include padding-trailer(3, 20px);
+        margin:0;
+        @include padding-leader(1, 14px);
+        @include padding-trailer(1, 14px);
+      }
     }
-    }
-  }
 
 }
 
+#site-title {
+    display:block;
+    min-width: 30%;
+    max-width: 400px;
+    margin: rhythm(1) auto;
+
+    @media (min-width: $medium-screen) {
+        @include span-columns(6);
+        margin: rhythm(1) 0;
+    }
+
+}
 
   #sitenav {
     @media (min-width: $medium-screen) {
       @include span-columns(6 omega);
       text-align:right;
+    }
+
+    .children {
+        display:none;
     }
 
     .home & {
