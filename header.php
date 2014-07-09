@@ -15,6 +15,7 @@
 
 <!-- Style sheets -->
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic|Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=entypo">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 <!-- Feeds and Pingbacks -->

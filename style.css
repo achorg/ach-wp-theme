@@ -365,6 +365,39 @@ div.colors div {
     color: rgba(60, 60, 60, 0.5);
   }
 
+  /*
+  * Hide only visually, but have it available for screen readers: h5bp.com/v
+  */
+  .visuallyhidden, footer[role=contentinfo] .elsewhere .text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  /*
+  * Extends the .visuallyhidden class to allow the element to be focusable
+  * when navigated to via the keyboard: h5bp.com/p
+  */
+  .visuallyhidden.focusable:active, footer[role=contentinfo] .elsewhere .focusable.text:active,
+  .visuallyhidden.focusable:focus,
+  footer[role=contentinfo] .elsewhere .focusable.text:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+
+  [class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+  }
+
   header[role=banner] {
     border-bottom: 1px solid rgba(60, 60, 60, 0.1);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0.25)), color-stop(100%, rgba(255, 255, 255, 0.25))), url("images/subtle_dots.gif");
@@ -798,12 +831,25 @@ div.colors div {
     padding-right: 2.85714%;
     background: white url("images/subtle_dots.gif") fixed;
   }
-  footer[role=contentinfo] p,
   footer[role=contentinfo] .vcard {
-    font-size: 0.875em;
-    line-height: 1.71429em;
-    line-height: 1.37143em;
     color: rgba(60, 60, 60, 0.75);
+  }
+  footer[role=contentinfo] .elsewhere {
+    font-size: 1.5em;
+    line-height: 2em;
+    margin-top: 1em;
+  }
+  footer[role=contentinfo] .elsewhere a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  footer[role=contentinfo] .elsewhere .icon {
+    border-radius: 50%;
+    background: #ff5533;
+    width: 2em;
+    text-align: center;
+    display: block;
+    color: white;
   }
   .kicker {
     margin: 0;
@@ -959,6 +1005,7 @@ div.colors div {
 @media screen and (min-width: 600px) {
   footer[role=contentinfo] {
     text-align: left;
+    padding-bottom: 1.5em;
   }
   footer[role=contentinfo]:before, footer[role=contentinfo]:after {
     content: "";
@@ -970,14 +1017,22 @@ div.colors div {
   footer[role=contentinfo], .ie footer[role=contentinfo] {
     *zoom: 1;
   }
-  footer[role=contentinfo] .vcard,
   footer[role=contentinfo] p {
-    width: 31.42857%;
+    width: 40%;
     float: right;
     margin-right: 0;
     *margin-left: -2em;
     display: inline;
     clear: right;
+    margin: 0;
+    text-align: right;
+  }
+  footer[role=contentinfo] .vcard {
+    width: 40%;
+    float: left;
+    margin-right: 2.85714%;
+    display: inline;
+    clear: left;
   }
 }
 

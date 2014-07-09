@@ -261,6 +261,41 @@ figcaption {
   }
 }
 
+
+/*
+* Hide only visually, but have it available for screen readers: h5bp.com/v
+*/
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 header[role=banner] {
   border-bottom:1px solid $default-color-lightest;
   @include background(
@@ -741,20 +776,48 @@ footer[role=contentinfo] {
   @include bleed($grid-padding);
   background: #fff url('images/subtle_dots.gif') fixed;
 
-  p,
   .vcard {
-    @include adjust-font-size-to(14px);
-    @include adjust-leading-to(0.8,14px);
     color: $default-color-light;
+  }
+
+  .elsewhere {
+      @include adjust-font-size-to(24px);
+      @include leader(1, 24px);
+      a {
+          text-decoration:none;
+          display:inline-block;
+      }
+
+      .icon {
+          border-radius: 50%;
+          background: $link-color;
+          width: 2em;
+          text-align:center;
+          display:block;
+          color: white;
+      }
+
+      .text {
+          @extend .visuallyhidden;
+      }
+
   }
 
   @media (min-width: $medium-screen) {
     @include clearfix;
     text-align:left;
-    .vcard,
+    padding-bottom: rhythm(1);
+    
     p {
-      @include span-columns(4 omega, 12);
-      clear:right;
+        @include span-columns(5 omega,12);
+        clear:right;
+        margin:0;
+        text-align:right;
+    }
+
+    .vcard {
+      @include span-columns(5, 12);
+      clear:left;
     }
   }
 }
