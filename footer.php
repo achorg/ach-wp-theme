@@ -17,7 +17,20 @@
 
     <p class="license"><span class="entypo-cc"></span> Content licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY-SA 3.0</a></p>
 
-    <p class="elsewhere"><a class="twitter" href="http://twitter.com/achdotorg"><span class="icon entypo-twitter" aria-hidden="true"></span><span class="text">Twitter</span></a> <a class="fontawesome-facebook-sign" href="http://www.facebook.com/ACHorg"><span class="icon entypo-facebook" aria-hidden="true"></span><span class="text">Facebook</span></a> <a class="fontawesome-github-sign" href="http://github.com/achdotorg"><span class="icon entypo-github" aria-hidden="true"></span><span class="text">Github</span></a></p>
+    <p class="elsewhere">
+        <a class="twitter" title="Twitter" href="http://twitter.com/achdotorg">
+            <span class="icon entypo-twitter" aria-hidden="true"></span>
+            <span class="text">Twitter</span>
+        </a>
+        <a class="facebook" title="Facebook" href="http://www.facebook.com/ACHorg">
+            <span class="icon entypo-facebook" aria-hidden="true"></span>
+            <span class="text">Facebook</span>
+        </a>
+        <a class="github" title="Github" href="http://github.com/achdotorg">
+            <span class="icon entypo-github" aria-hidden="true"></span>
+            <span class="text">Github</span>
+        </a>
+    </p>
 </footer>
 <?php wp_footer(); ?>
 </body>
