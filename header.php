@@ -43,7 +43,7 @@
 <header role="banner">
 
         <a id="site-title"href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>">
-        <?php echo bloginfo('name'); ?>
+        <?php include(get_stylesheet_directory() . '/images/ach-logo.svg'); ?>
         </a>
 
 <?php if (is_front_page()): ?>
