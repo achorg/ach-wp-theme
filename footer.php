@@ -26,7 +26,7 @@
             <span class="icon entypo-facebook" aria-hidden="true"></span>
             <span class="text">Facebook</span>
         </a>
-        <a class="github" title="Github" href="http://github.com/achdotorg">
+        <a class="github" title="Github" href="http://github.com/achorg">
             <span class="icon entypo-github" aria-hidden="true"></span>
             <span class="text">Github</span>
         </a>
