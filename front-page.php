@@ -5,11 +5,11 @@
 <div class="primary">
 <div class="conference content-feature">
 <figure class="small-image">
-<img src="/wp-content/uploads/2014/02/dh2014logo.png">
+<img src="http://ach.org/wp-content/uploads/2014/10/dh2015logo.jpg">
 </figure>
-<h2><a href="/conferences">Digital Humanities 2014</a></h2>
-<p>Our annual conference, jointly hosted by the University of Lausanne (UNIL) and Ecole Polytechnique Fédérale de Lausanne (EPFL)</p>
-<p><a href="http://ach.org/conferences/digital-humanities-2014/">ACH at DH2014</a> | <a href="http://dh2014.org" title="Web site for the 2014 conference.">Conference Website</a></p>
+<h2>Digital Humanities 2015</h2>
+<p><em>Sydney, Australia, 29 June–3 July 2015</em></p>
+<p>Hosted by University of Western Sydney’s Digital Humanities Research Group. <a href="http://dh2014.org">Conference website</a></p>
 </div>
 <?php dynamic_sidebar( 'primary-home-widget-area' ); ?></div>
 <div class="secondary"><?php dynamic_sidebar( 'secondary-home-widget-area' ); ?></div>
